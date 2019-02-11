@@ -9,8 +9,8 @@ def merge_sort(ulist):
         length_first_half = len(first_half)
         length_second_half = len(second_half)
 
-        #merge_sort(first_half)
-        #merge_sort(second_half)
+        merge_sort(first_half)
+        merge_sort(second_half)
 
         index = 0
         left_index = 0
@@ -29,16 +29,13 @@ def merge_sort(ulist):
         while left_index < length_first_half:
             ulist[index] = first_half[left_index]
             left_index += 1
+            index += 1
 
 
         while right_index < length_second_half:
             ulist[index] = second_half[right_index]
             right_index += 1
+            index += 1
 
 
         return ulist
-
-
-
-a = [1,222,3,23,4,5,6,45,7,2,3,12,3,5,3,6,45,3,1,2,4]
-print(merge_sort(a))
